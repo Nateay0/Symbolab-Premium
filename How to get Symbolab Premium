@@ -10,9 +10,12 @@ UC Browser:      https://www.tampermonkey.net/?ext=dhdg&browser=ucweb
 
 2) Click on the Tampermonkey Extension icon and select 'Create a new script...'.
 
+
 3) The editor with pre-generated code opens. Delete everything.
 
+
 4) Paste the scripts below into the editor: 
+
 
 (function () {
     'use strict';
@@ -30,13 +33,14 @@ UC Browser:      https://www.tampermonkey.net/?ext=dhdg&browser=ucweb
     document.documentElement.removeAttribute('onreset');
 })();
 
-4) On the Menu bar, click File and then click Save.
 
-5) Restart your web browser.
+5) On the Menu bar, click File and then click Save.
+
+
+6) Restart your web browser.
+
 
 Everything should be unlocked now.
-
 This demonstration is for informational and educational purposes only.
-
 ----
 Twitter: https://twitter.com/abakritweets
