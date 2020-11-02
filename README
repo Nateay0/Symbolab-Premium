@@ -1,0 +1,42 @@
+1) Install Tampermonkey:
+Chrome:          https://www.tampermonkey.net/?ext=dhdg&browser=chrome
+Firefox:         https://www.tampermonkey.net/?ext=dhdg&browser=firefox
+Microsoft Edge:  https://www.tampermonkey.net/?ext=dhdg&browser=edge
+Safari:          https://www.tampermonkey.net/?ext=dhdg&browser=safari
+Opera:           https://www.tampermonkey.net/?ext=dhdg&browser=opera
+Dolphin Browser: https://www.tampermonkey.net/?ext=dhdg&browser=dolphin
+UC Browser:      https://www.tampermonkey.net/?ext=dhdg&browser=ucweb
+
+
+2) Click on the Tampermonkey Extension icon and select 'Create a new script...'.
+
+3) The editor with pre-generated code opens. Delete everything.
+
+4) Paste the scripts below into the editor: 
+
+(function () {
+    'use strict';
+    var code = `window.onload = function(){
+        if (typeof(SOLUTIONS) != 'undefined') { SOLUTIONS.subscribed = true };
+        if (typeof(SYMBOLAB) != 'undefined') { SYMBOLAB.params.subscribed = true };
+        if (typeof(SYSTEPS) != 'undefined') { SYSTEPS.subscribed = true };
+        isUserLoggedIn = function() { return true; }
+        if ($("#click-capture")) {
+            $("#click-capture").addClass("click-capture-subscribed");
+        }
+    }`;
+    document.documentElement.setAttribute('onreset', code);
+    document.documentElement.dispatchEvent(new CustomEvent('reset'));
+    document.documentElement.removeAttribute('onreset');
+})();
+
+4) On the Menu bar, click File and then click Save.
+
+5) Restart your web browser.
+
+Everything should be unlocked now.
+
+This demonstration is for informational and educational purposes only.
+
+----
+Twitter: https://twitter.com/abakritweets
