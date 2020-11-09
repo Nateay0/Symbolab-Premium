@@ -17,6 +17,17 @@ UC Browser:      https://www.tampermonkey.net/?ext=dhdg&browser=ucweb
 4) Paste the scripts below into the editor: 
 
 
+// ==UserScript==
+// @name         Symbolab Premium
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Bypass Symbolab's paywall to show all steps without paying.
+// @author       A.
+// @match        https://www.symbolab.com/
+// @include      *://*symbolab.com/*
+// @grant        none
+// ==/UserScript==
+
 (function () {
     'use strict';
     var code = `window.onload = function(){
